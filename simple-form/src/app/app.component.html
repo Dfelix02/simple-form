@@ -1,0 +1,22 @@
+
+
+<form [formGroup]="loginform" class="form">
+  <h1>Welcome!</h1>
+  <input type="text" placeholder="Enter First Name" formControlName="fname"><br>
+  <span *ngIf="fname?.invalid && fname?.touched">first name is required !!</span>
+  <br>
+  <input type="text" placeholder="Enter Last Name" formControlName="lname"><br>
+  <span *ngIf="lname?.invalid && lname?.touched">last name is required !!</span>
+  <br>
+  <input type="email" placeholder="Enter email" formControlName="email"><br>
+  <span *ngIf="email?.invalid && email?.touched">email is required !!</span>
+  <br>
+  <input type="number" placeholder="Enter Age" formControlName="age"><br>
+  <span *ngIf="age?.invalid && age?.touched">age is required !!</span>
+  <br>
+  <input type="password" placeholder="Enter Password" formControlName="password"><br>
+  <span *ngIf="password?.invalid && password?.touched">password is incorrect !!</span>
+  <br>
+  <button>Login</button>
+
+</form>
